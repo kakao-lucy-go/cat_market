@@ -8,25 +8,27 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.resource.PathResourceResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan("*")
+@EnableWebMvc
+@ComponentScan("branch")
 public class MarketConfiguration extends WebMvcConfigurerAdapter{
-
+/*
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://" + "localhost" + "/" + "8080"  + "?useSSL=false");
-		dataSource.setUsername("");
-		dataSource.setPassword("");
+		dataSource.setUsername("mysql");
+		dataSource.setPassword("mysql");
 		return dataSource;
 	}
-	
+	*/
     @Bean
     public ViewResolver getViewResolver() {
         InternalResourceViewResolver resolver
