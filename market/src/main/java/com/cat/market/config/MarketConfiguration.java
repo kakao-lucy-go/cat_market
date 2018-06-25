@@ -18,17 +18,17 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = "com.cat.market")
 public class MarketConfiguration extends WebMvcConfigurerAdapter{
-/*
+
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://" + "localhost" + "/" + "8080"  + "?useSSL=false");
-		dataSource.setUsername("mysql");
-		dataSource.setPassword("mysql");
+		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://catmarket.clvocrcmom1x.us-east-2.rds.amazonaws.com:3306/");
+		dataSource.setUsername("cataaaa");
+		dataSource.setPassword("Catmarket1114!");
 		return dataSource;
 	}
-	*/
+	
     @Bean
     public ViewResolver getViewResolver() {
         InternalResourceViewResolver resolver
